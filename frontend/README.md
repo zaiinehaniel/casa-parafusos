@@ -1,27 +1,19 @@
-# TestApp
+# Casa dos Parafusos - Frontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.1.
+## Descrição
 
-## Development server
+Esta é uma aplicação de integração para a **Casa dos Parafusos**, desenvolvida com **Angular**. O objetivo principal da aplicação é facilitar a gestão e o controle de dados relacionados ao negócio, proporcionando uma interface amigável e eficiente para os usuários.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Funcionalidades
 
-## Code scaffolding
+### 1. Controle de Acesso e Autenticação
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+A aplicação implementa um sistema de controle de acesso robusto, garantindo que apenas usuários autorizados possam acessar as funcionalidades disponíveis. Os usuários podem se registrar, fazer login e gerenciar suas credenciais de forma segura.
 
-## Build
+### 2. Parametrização da Integração
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Os usuários têm a capacidade de parametrizar a integração conforme suas necessidades. Isso inclui a configuração de opções que afetam como os dados são processados e apresentados, proporcionando flexibilidade e personalização.
 
-## Running unit tests
+### 3. Importação da Planilha Mercado Livre
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+A aplicação permite a importação de dados diretamente de planilhas do Mercado Livre, facilitando a integração com as informações de vendas e produtos. Os usuários podem importar facilmente dados relevantes e utilizá-los para análise e gerenciamento.
