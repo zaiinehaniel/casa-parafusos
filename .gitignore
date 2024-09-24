@@ -7,6 +7,8 @@ backend/.venv/
 backend/venv/
 backend/env/
 backend/ENV/
+backend/.idea/
+
 
 # Ignore Docker files
 *.log
@@ -20,6 +22,7 @@ docker-compose.override.yml
 /frontend/.tmp/
 /frontend/coverage/
 /frontend/*.log
+/frontend/.idea
 
 # Ignore backend dependencies and artifacts
 /backend/__pycache__/
