@@ -1,0 +1,77 @@
+<div class="blank-layout-container justify-content-center align-items-center bg-light-primary">
+    <div
+            class="position-relative row w-100 h-100 bg-gredient justify-content-center"
+    >
+        <div class="col-lg-4 d-flex align-items-center">
+            <mat-card class="cardWithShadow boxed-auth">
+                <mat-card-content class="p-32">
+                    <div class="text-center">
+                        <h2>Parâmetros de Integração </h2>
+                    </div>
+
+                    <form class="m-t-30" [formGroup]="integracaoForm" (ngSubmit)="onSubmit()">
+                        <!-- Name -->
+                        <mat-label class="mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block">
+                            Name
+                        </mat-label>
+                        <mat-form-field appearance="outline" class="w-100" color="primary">
+                            <input matInput formControlName="name" />
+                        </mat-form-field>
+
+                        <!-- Forma Pagamento -->
+                        <mat-label class="mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block">
+                            Forma Pagamento
+                        </mat-label>
+                        <mat-form-field appearance="outline" class="w-100" color="primary">
+                            <input matInput formControlName="forma_pagamento" />
+                        </mat-form-field>
+
+                        <!-- Conta Contabil -->
+                        <mat-label class="mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block">
+                            Conta Contabil
+                        </mat-label>
+                        <mat-form-field appearance="outline" class="w-100" color="primary">
+                            <input matInput formControlName="conta_contabil" />
+                        </mat-form-field>
+
+                        <!-- Conta Contabil Contra partida-->
+                        <mat-label class="mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block">
+                            Conta Contabil Contra Partida
+                        </mat-label>
+                        <mat-form-field appearance="outline" class="w-100" color="primary">
+                            <input matInput formControlName="conta_contabil_contra_partida" />
+                        </mat-form-field>
+
+                        <!-- Empresa -->
+                        <mat-label class="mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block">
+                            Empresa
+                        </mat-label>
+                        <mat-form-field appearance="outline" class="w-100" color="primary">
+                            <input matInput formControlName="empresa" />
+                        </mat-form-field>
+
+                        <!-- Cliente Tarifa -->
+                        <mat-label class="mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block">
+                            Cliente Tarifa
+                        </mat-label>
+                        <mat-form-field appearance="outline" class="w-100" color="primary">
+                            <input matInput formControlName="cliente_tarifa" />
+                        </mat-form-field>
+
+                        <!-- Cliente Frete -->
+                        <mat-label class="mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block">
+                            Cliente Frete
+                        </mat-label>
+                        <mat-form-field appearance="outline" class="w-100" color="primary">
+                            <input matInput formControlName="cliente_frete" />
+                        </mat-form-field>
+
+                        <button mat-flat-button color="primary" class="w-100">
+                            Save Integration
+                        </button>
+                    </form>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+</div>

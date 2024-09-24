@@ -1,0 +1,26 @@
+# Ignore Python compiled files
+__pycache__/
+*.py[cod]
+
+# Ignore virtual environment directories
+backend/.venv/
+backend/venv/
+backend/env/
+backend/ENV/
+
+# Ignore Docker files
+*.log
+docker-compose.override.yml
+
+# Ignore frontend dependencies and build artifacts
+/frontend/node_modules/
+/frontend/dist/
+/frontend/out-tsc/
+/frontend/.angular/
+/frontend/.tmp/
+/frontend/coverage/
+/frontend/*.log
+
+# Ignore backend dependencies and artifacts
+/backend/__pycache__/
+/backend/*.log

@@ -1,0 +1,110 @@
+<style>
+    .form-container {
+        display: flex;
+        /*justify-content: center;*/
+        /*align-items: center;*/
+        /*height: 100vh;*/
+    }
+
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .drop-area-large {
+        width: 100%;
+        height: 100px;
+        border: 2px dashed #ccc;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .drop-area-large p {
+        margin-bottom: 10px;
+    }
+
+    .mat-radio-button {
+        margin-right: 10px;
+    }
+
+    .mat-button-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .file-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px; /* Adjust the margin as needed */
+    }
+
+    .file-item span {
+        margin-right: 10px; /* Adjust the margin between filename and button */
+    }
+
+    .remove-button {
+        width: 24px; /* Adjust the width as needed */
+        height: 24px; /* Adjust the height as needed */
+        padding: 0; /* Remove padding */
+    }
+
+    .remove-button .mat-button-wrapper {
+        width: 24px; /* Adjust the width as needed */
+        height: 24px; /* Adjust the height as needed */
+    }
+
+    .remove-button .mat-icon {
+        font-size: 16px; /* Adjust the font size as needed */
+    }
+
+    .error-message {
+        color: #f44336; /* Error color */
+        font-size: 0.875rem; /* Adjust font size as needed */
+        margin-top: 4px; /* Add some space at the top */
+    }
+
+</style>
+
+<mat-card class="cardWithShadow">
+    <mat-card-content>
+    <mat-card-title>Integração de planilha ERP CISS</mat-card-title>
+<br>
+    <form #form="ngForm" (ngSubmit)="submitForm(form)" class="form">
+        <div class="form-group">
+            <mat-card class="drop-area-large" (dragover)="onDragOver($event)" (drop)="onDrop($event)" (click)="openFilePicker()">
+                <mat-card-content>
+                    <p>Clique para selecionar o arquivo</p>
+                    <input type="file" name="files" (change)="onFileSelected($event)" style="display:none" multiple>
+                </mat-card-content>
+            </mat-card>
+            <div *ngIf="file_need" class="error-message">
+                <mat-error>Selecione pelo menos um arquivo.</mat-error>
+            </div>
+
+            <div *ngIf="files.length > 0">
+                <p>Selected Files:</p>
+                <ul>
+                    <li *ngFor="let file of files" class="file-item">
+                        <span>{{ file.name }}</span>
+                        <button mat-fab color="warn" style="width: 30px; height: 30px" (click)="removeFile(file.name)">
+                            <i-tabler
+                                    name="trash"
+                                    class="text-white d-flex"
+                            ></i-tabler>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="form-group">
+            <button mat-raised-button color="primary" type="submit">Processar</button>
+        </div>
+    </form>
+    </mat-card-content>
+</mat-card>
